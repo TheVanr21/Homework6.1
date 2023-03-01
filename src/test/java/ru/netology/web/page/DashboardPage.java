@@ -21,6 +21,7 @@ public class DashboardPage {
 
     public void isOpen() {
         dashboardHeader.shouldBe(Condition.visible);
+        dashBoardMode.shouldHave(Condition.text("Ваши карты"));
     }
 
     private SelenideElement getCardById(String id) {

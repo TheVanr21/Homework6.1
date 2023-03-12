@@ -23,10 +23,10 @@ public class MoneyTransferTest {
 
     @BeforeEach
     public void init() {
-        user = new DataHelper.AuthInfo("vasya", "qwerty123");
-        code = new DataHelper.VerificationCode("12345");
-        cardOne = new DataHelper.Card("92df3f1c-a033-48e6-8390-206f6b1f56c0", "5559 0000 0000 0001", 10000);
-        cardTwo = new DataHelper.Card("0f3f5c2a-249e-4c3d-8287-09f7a039391d", "5559 0000 0000 0002", 10000);
+        user = DataHelper.getValidUser();
+        code = DataHelper.getVerificationCode();
+        cardOne = DataHelper.getFirstCard();
+        cardTwo = DataHelper.getSecondCard();
         cardOneId = cardOne.getId();
         cardTwoId = cardTwo.getId();
         cardOneNumber = cardOne.getNumber();
